@@ -1,0 +1,8 @@
+.venv
+venv
+__pycache__
+apache*
+anotações.md
+image.png
+routes/__pycache__
+reunião.md

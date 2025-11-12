@@ -5,6 +5,9 @@
 .venv\Scripts\activate
 ```
 
+No linux:
+`source .venv/bin/activate`
+
 ## Instalar requisitos
 ```bash
 pip install -r requirements.txt
