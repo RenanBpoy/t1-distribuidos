@@ -105,11 +105,11 @@ Referências
 - https://neon.com/docs/guides/logical-replication-concepts
 - https://ead06.proj.ufsm.br/pluginfile.php/5530406/mod_resource/content/1/chap-5-replication.pdf
 - Como criar as réplicas (detalhamento mais técnico): https://deepwiki.com/neondatabase/website/3.4-logical-replication 
-
+- [Create and manage Read Replicas](https://neon.com/docs/guides/read-replica-guide)
 
 #### Conclusão
 
-- Será utilizado a arquitetura single-leader com 1 líder e 3 réplicas. O líder recebe as escritas e escreve nas réplicas, enquanto as réplicas apenas recebem leituras, sendo essas gerenciadas por um loadbalancer (como o ngix)
+- Será utilizado a arquitetura single-leader com 1 líder e 3 réplicas. O líder recebe as escritas e escreve nas réplicas, enquanto as réplicas apenas recebem leituras, sendo essas gerenciadas por um loadbalancer (com o algoritmo de roun-robin)
 - As réplicas serão atualizadas de forma [assíncrona](https://neon.com/blog/introducing-same-region-read-replicas-to-serverless-postgres), usando o protocolo [logical replication](https://neon.com/docs/guides/logical-replication-neon).
 - O servidor (backend (fastapi)) é stateless. 
 

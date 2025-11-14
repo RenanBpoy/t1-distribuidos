@@ -1,10 +1,10 @@
 from fastapi import FastAPI
-from database import Base, engine
+from database import Base, write_engine
 from routers import produto
 
 app = FastAPI()
 
-Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=write_engine)
 
 app.include_router(produto.router)
 
